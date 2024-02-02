@@ -1,0 +1,96 @@
+ALGORITHM sentence_len_calculate
+
+VAR
+
+    count:=0,totalChar:=0, INTEGER:=0;
+
+    sentence :STRING;
+
+
+BEGIN
+
+   Read(sentence) //"Talent is rare until creativity prevails."
+
+   WHILE (sentence[count]<>".") DO // Loop until a period is encountered at the end of the string
+
+    count=count+1 //Move to the next character in the string
+
+   END_WHILE
+
+   totalCharacter=count+1  // Calculate the total character count, including the period
+
+   Write(totalChar)  // Display the total character count
+
+END
+
+//end of sentence length calculation
+
+
+ALGORITHM calculate_vowels
+
+VAR
+
+    count:=0 ,totalVow:=0, INTEGER:=0;
+
+    sentence :STRING;
+
+
+BEGIN
+
+   Read(sentence)  
+
+   WHILE (sentence[count]<>".") DO
+
+
+    SWITCH (sentence[count]) DO
+
+        case a : totalVow=totalVow+1;
+
+        case e : totalVow=totalVow+1
+
+        case i : totalVow=totalVow+1
+
+        case o : totalVow=totalVow+1
+
+        case u : totalVow=totalVow+1
+
+        default : totalVow=totalVow+0
+
+    END_SWITCH
+
+    count=count+1
+
+   END_WHILE
+
+END
+
+//end of vowel count
+
+
+ALGORITHM calculate_word_length
+
+VAR
+
+    count:=0 ,totalWords:=0, INTEGER:=0;
+
+    sentence :STRING;
+
+BEGIN
+
+   Read(sentence)
+
+   WHILE (sentence[count]<>".") DO
+
+    if sentence[count]=" "
+
+    totalWords
+
+    else
+
+    totalWords=totalWords+1
+
+   END_WHILE
+
+   count=count+1
+
+END
